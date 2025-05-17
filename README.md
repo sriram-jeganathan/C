@@ -1,1 +1,6 @@
-# c_practice
+# C PROGRAMS
+
+## Print out statements
+```
+
+```
