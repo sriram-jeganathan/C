@@ -1,7 +1,7 @@
 # C PROGRAMS
 
 ## Declaring Variables
-### program
+### Program
 ```
 #include <stdio.h>
 
@@ -19,6 +19,7 @@ int main() {
 </pre>
 
 ## Input Command
+### Program
 ```
 #include <stdio.h>
 
@@ -30,12 +31,16 @@ int main() {
 	return 0;
 }
 ```
+Expected Output:
+![image](https://github.com/user-attachments/assets/d8e13cef-8f3b-47b9-80a5-e97b4b774f6f)
+
 
 ## Print Command
 
 <pre>
   - Statement Printing
 </pre>
+### Program
 ```
 #include <stdio.h>
 
@@ -50,6 +55,7 @@ Expected Output:
 <pre>
   - Printing with a variable
 </pre>
+### Program
 ```
 #include <stdio.h>
 
