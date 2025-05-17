@@ -1,11 +1,17 @@
 # C PROGRAMS
 
 ## Declaring Variables
+### program
 ```
-int x,y,z;
-x=10;
-y=20;
-z=15;
+#include <stdio.h>
+
+int main() {
+	int x,y,z;
+	x=10;
+	y=20;
+	z=15;
+	return 0;
+}
 ```
 <pre>
   - For creating variables in C, we must specify the data type enter the variable name(s)
@@ -14,7 +20,7 @@ z=15;
 
 ## Input Command
 ```
-include <stdio.h>
+#include <stdio.h>
 
 int main() {
 // Declaring the variable
