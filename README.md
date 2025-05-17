@@ -18,23 +18,6 @@ int main() {
   - The values can later be entered throughout the code
 </pre>
 
-## Input Command
-### Program
-```
-#include <stdio.h>
-
-int main() {
-// Declaring the variable
-	int x;
-	printf("Enter your Input");
-	scanf( %d, &x );
-	return 0;
-}
-```
-Expected Output:
-![image](https://github.com/user-attachments/assets/d8e13cef-8f3b-47b9-80a5-e97b4b774f6f)
-
-
 ## Print Command
 
 <pre>
@@ -68,6 +51,23 @@ int main() {
 ```
 Expected Output:
 ![image](https://github.com/user-attachments/assets/2ff0b447-2db9-4698-b1d2-4382947e0e18)
+
+## Input Command
+### Program
+```
+#include <stdio.h>
+
+int main() {
+// Declaring the variable
+	int x;
+	printf("Enter your Input");
+	scanf( %d, &x );
+	return 0;
+}
+```
+Expected Output:
+![image](https://github.com/user-attachments/assets/d8e13cef-8f3b-47b9-80a5-e97b4b774f6f)
+
 
 
 
