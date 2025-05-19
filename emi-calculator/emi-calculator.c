@@ -15,7 +15,7 @@ int main() {
 	scanf("%lf", &pv);
 
 	
-	printf("Is the loan duration in years or months; ");
+	printf("Is the loan duration in years or months: ");
 	scanf(" %c", &choice);
 
 	if (choice == 'y') {
@@ -44,7 +44,28 @@ int main() {
 
 // Calculating the result
 	result= num/den;
-	printf("The EMI for a loan of %lf with a interest of %lf and a duration of %d is %lf\n",pv,i,n,result); 
+	printf("The EMI for a loan of %.2lf with a interest of %.2lf and a duration of %d is %.2lf\n",pv,i,n,result); 
 	
+// Print amortization table
+	double balance = pv;
+	double interestPaid, principalPaid;
+
+	printf("\e[1mAMORTIZATION LOAN SCHEDULE\e[0m\n");
+
+	printf("\n+------------+---------------+----------------+-------------------+\n");
+	printf("| Payment #  | Interest Paid | Principal Paid | Remaining Balance |\n");
+	printf("+------------+---------------+----------------+-------------------+\n");
+
+	for (int month = 1; month <= n; month++) {
+    		interestPaid = balance * i;
+    		principalPaid = result - interestPaid;
+    		balance -= principalPaid;
+
+    	if (balance < 0.01) balance = 0;
+		printf("| %-10d | %-13.2f | %-14.2f | %-17.2f |\n",month, interestPaid, principalPaid, balance);
+	}
+
+	printf("+------------+---------------+----------------+-------------------+\n");
 	return 0;
+
 }
