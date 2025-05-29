@@ -14,7 +14,7 @@ int main() {
 }
 ```
 <pre>
-  - For creating variables in C, we must specify the data type enter the variable name(s)
+  - For creating variables in C, we must specify the data type before the variable name(s)
   - The values can later be entered throughout the code
 </pre>
 
