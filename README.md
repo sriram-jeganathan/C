@@ -61,7 +61,7 @@ int main() {
 // Declaring the variable
 	int x;
 	printf("Enter your Input");
-	scanf( %d, &x );
+	scanf("%d", &x );
 	return 0;
 }
 ```
