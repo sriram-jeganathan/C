@@ -52,6 +52,26 @@ int main() {
 Expected Output:
 ![image](https://github.com/user-attachments/assets/2ff0b447-2db9-4698-b1d2-4382947e0e18)
 
+<pre>
+  - Printing with a variable with specified amount of decimal places
+</pre>
+
+```
+#include <stdio.h>
+
+int main() {
+	// declaring integer variables
+	int x,y,result;
+	printf("Enter any number: ");
+	scanf ("%d", &x);
+	printf("Enter another number: ");
+	scanf ("%d", &y);
+
+	printf("%d diveded by %d gives %.2d", x,y,result);
+	return 0;
+}
+```
+
 ## Input Command
 ### Program
 ```
