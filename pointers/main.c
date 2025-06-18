@@ -14,8 +14,13 @@ int main() {
     struct student *ptr = &rec1;
 
     printf("Enter rollNo: ");
+<<<<<<< HEAD
     scanf("%d", &rec1.rollno);
     getchar();  
+=======
+    scanf("%d", &(*ptr).rollno);
+    getchar(); 
+>>>>>>> f063bc6a8ad441c356634123d20d481ab2af561f
 
     printf("Enter name: ");
     scanf(" %[^\n]s", (*ptr).name);
