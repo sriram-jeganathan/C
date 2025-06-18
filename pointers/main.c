@@ -14,8 +14,8 @@ int main() {
     struct student *ptr = &rec1;
 
     printf("Enter rollNo: ");
-    scanf("%d", &(*ptr).rollno);
-    getchar(); 
+    scanf("%d", &rec1.rollno);
+    getchar();  
 
     printf("Enter name: ");
     scanf(" %[^\n]s", (*ptr).name);
