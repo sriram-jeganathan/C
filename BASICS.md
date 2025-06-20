@@ -130,7 +130,6 @@ int main() {
 ## For Loop
 A for loop is used when a block of statements needs to be iterated a known and fixed number of times.
 
-
 Syntax:
 ```
 #include <stdio.h>
@@ -159,6 +158,39 @@ int main() {
 Output: 
 
 1   2   3   4   5   6   7   8   9   10
+
+---
+
+## While Loop
+
+A while loop is used when a block of statements needs to be iterated an unknown number of times, depending on a condition.
+
+Syntax:
+```
+#include <stdio.h>
+
+int main() {
+
+  while ( condition ) {
+    block of statement
+  }
+  return 0;
+}
+```
+For Ex:
+```
+// This program prints the first 10 natural numbers using while loop
+#include <stdio.h>
+
+int main() {
+  int i = 1
+  while ( i < 11 ) {
+    printf("%d\t", i);
+    i++;
+  }
+  return 0;
+}
+```
 
 ---
 
