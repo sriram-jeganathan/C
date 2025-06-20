@@ -77,7 +77,7 @@ int main() {
 
 ```
 There are special characters, each serving a different purpose.
-Some basic special characters are /n, /t and more . . .
+Some basic special characters are \n, \t and more . . .
 
 
 ---
@@ -95,9 +95,9 @@ int main() {
 
   // to check if the number is even or odd
   if ( x % 2 == 0 ) {
-    printf( "%d is even!/n ", x );
+    printf( "%d is even!\n ", x );
   } else {
-    printf( "%d is odd!/n ", x );
+    printf( "%d is odd!\n ", x );
   }
 
   return 0;
@@ -151,13 +151,14 @@ For Ex:
 int main() {
 
   for ( int i = 1; i <= 10; i++ ){
-    printf("%d/t", i);
+    printf("%d\t", i);
   }
   return 0;
 }
 ```
 Output: 
-1  2  3  4  5  6  7  8  9  10
+
+1    2    3    4    5    6    7    8    9    10
 
 ---
 
