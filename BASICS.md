@@ -54,7 +54,7 @@ this is only for checking and calculating purpose
 
 ---
 
-## Printing Statement
+## Printing Statements
 A printf statement is used to return a formatted output to the screen
 ```
 #include <stdio.h>
@@ -67,7 +67,6 @@ int main() {
 ```
 To pass a variable through the printf statement, we must use the specified variable's format specifier and the variable name.
 ```
-
 #include <stdio.h>
 
 int main() {
@@ -83,7 +82,7 @@ Some basic special characters are /n, /t and more . . .
 
 ---
 
-## If statements
+## If Statements
 An if statement is a conditional statement used in programming to execute a block of code only if a specified condition is true.
 
 For Ex:
@@ -107,6 +106,7 @@ int main() {
 For the above Program, the output will be "10 is even! ".
 
 We can also use elseif statements to add more conditions. Only when the first if condition fails, the elseif statement run.
+
 Syntax:
 ```
 #include <stdio.h>
@@ -124,6 +124,40 @@ int main() {
   return 0;
 }
 ```
+
+---
+
+## For Loop
+A for loop is used when a block of statements needs to be iterated a known and fixed number of times.
+
+
+Syntax:
+```
+#include <stdio.h>
+
+int main() {
+
+  for ( initialization; condition; update ){
+    block of statement
+  }
+  return 0;
+}
+```
+For Ex:
+```
+// This program prints the first 10 natural numbers using for loop
+#include <stdio.h>
+
+int main() {
+
+  for ( int i = 1; i <= 10; i++ ){
+    printf("%d/t", i);
+  }
+  return 0;
+}
+```
+Output: 
+1  2  3  4  5  6  7  8  9  10
 
 ---
 
