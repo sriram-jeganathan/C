@@ -32,10 +32,7 @@ The common operators used in C to carry out mathematical calculations are ( with
 ## Logical Operators
 These operators are used to specify the logic between variables and operators, with multiple conditions
 
-| Operators |    Use    | 
-|:---------:|:---------:|
-| && - AND  | Returns true only when both values are true |
-| "||" - OR   | Returns true if any one value is true |
-| ! - NOT   | Returns true if false and false if true |
-
+- `&&` - AND: Returns true only when both values are true  
+- `||` - OR: Returns true if any one value is true  
+- `!` - NOT: Returns true if false and false if true
 ---
