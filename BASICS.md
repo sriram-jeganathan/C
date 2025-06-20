@@ -11,6 +11,18 @@ There are 4 basic data types along with it's format specifier
 3. float - %f
 4. double - %lf
 
-** NOTE: ** there is no string data type in C
+**NOTE:** there is no string data type in C
 
+---
 
+## Arithmetic Operators
+The common operators used in C to carry out mathematical calculations are ( with operator precedence )
+| Operators | 
+|:---------:|
+| *         |
+| /         |
+| %         |
+| +         |
+| -         |
+| ++        |
+| --        |
