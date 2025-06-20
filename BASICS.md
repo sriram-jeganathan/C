@@ -39,5 +39,5 @@ These operators are used to specify the logic between variables and operators, w
 ---
 
 ## If statements
-The if statment has a condition. When 
+The if statment has a condition. When the if condition is met 
 
