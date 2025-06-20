@@ -35,7 +35,7 @@ These operators are used to specify the logic between variables and operators, w
 | Operators |    Use    | 
 |:---------:|:---------:|
 | && - AND  | Returns true only when both values are true |
-| || - OR   | Returns true if any one value is true |
+ || - OR   | Returns true if any one value is true |
 | ! - NOT   | Returns true if false and false if true |
 
 ---
