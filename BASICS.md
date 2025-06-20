@@ -85,6 +85,7 @@ Some basic special characters are /n, /t and more . . .
 
 ## If statements
 An if statement is a conditional statement used in programming to execute a block of code only if a specified condition is true.
+
 For Ex:
 ```
 #include <stdio.h>
