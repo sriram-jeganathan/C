@@ -78,6 +78,17 @@ Conditional statements in C are used to control the flow of execution based on s
 ## If Statements
 An if statement is a conditional statement used in programming to execute a block of code only if a specified condition is true.
 
+`Syntax:`
+```
+if ( condition ) {
+  // code block
+} elseif ( condition ) {
+  // code block
+} else {
+  // code block
+}
+```
+We can also use elseif statements to add more conditions. Only when the first if condition fails, the elseif statement run.
 `For Ex:`
 ```
 #include <stdio.h>
@@ -96,18 +107,6 @@ int main() {
 ```
 `Output:` 10 is even!
 
-We can also use elseif statements to add more conditions. Only when the first if condition fails, the elseif statement run.
-
-`Syntax:`
-```
-if ( condition ) {
-  // code block
-} elseif ( condition ) {
-  // code block
-} else {
-  // code block
-}
-```
 ## Switch-Case Statements
 Switch-case statements are also a type of conditional statement in C. They are used to execute different blocks of code based on the value of a single variable or expression. This statement works best when checking a variable against multiple constant values.
 
