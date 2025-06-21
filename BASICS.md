@@ -78,7 +78,7 @@ Conditional statements in C are used to control the flow of execution based on s
 ## If Statements
 An if statement is a conditional statement used in programming to execute a block of code only if a specified condition is true.
 
-For Ex:
+`For Ex:`
 ```
 #include <stdio.h>
 
@@ -94,29 +94,23 @@ int main() {
   return 0;
 }
 ```
-For the above Program, the output will be "10 is even! ".
-
+`Output:` 10 is even!
 We can also use elseif statements to add more conditions. Only when the first if condition fails, the elseif statement run.
 
-Syntax:
+`Syntax:`
 ```
-#include <stdio.h>
-
-int main() {
-  if ( condition ) {
-    // code block
-  } elseif ( condition ) {
-    // code block
-  } else {
-    // code block
-  }
-  return 0;
+if ( condition ) {
+  // code block
+} elseif ( condition ) {
+  // code block
+} else {
+  // code block
 }
 ```
 ## Switch-Case Statements
 Switch-case statements are also a type of conditional statement in C. They are used to execute different blocks of code based on the value of a single variable or expression. This statement works best when checking a variable against multiple constant values.
 
-Syntax:
+`Syntax:`
 ```
 switch (expression) {
     case constant1:
@@ -129,11 +123,10 @@ switch (expression) {
     default:
         // default code block
 }
-
 ```
 Without the use of `break`, execution will continue into the next case, even if a match is found. This is called `fall-through` and is usually not efficient or desired. Therefore, we use break to exit the switch block once a matching case has been executed.
 
-For Ex: 
+`For Ex:`
 ```
 #include <stdio.h>
 
@@ -168,20 +161,20 @@ int main() {
     return 0;
 }
 ```
+`Output:` Wednesday
 
 ---
 
 ## For Loop
 A for loop is used when a block of statements needs to be iterated a known and fixed number of times.
 
-Syntax:
+`Syntax:`
 ```
 for ( initialization; condition; update ){
   // code block
 }
-  
 ```
-For Ex:
+`For Ex:`
 ```
 // This program prints the first 10 natural numbers using for loop
 #include <stdio.h>
@@ -193,9 +186,7 @@ int main() {
   return 0;
 }
 ```
-Output: 
-
-1   2   3   4   5   6   7   8   9   10
+`Output:` 1   2   3   4   5   6   7   8   9   10
 
 ---
 
@@ -203,18 +194,13 @@ Output:
 
 A while loop is used when a block of statements needs to be iterated an unknown number of times, depending on a condition.
 
-Syntax:
+`Syntax:`
 ```
-#include <stdio.h>
-
-int main() {
-  while ( condition ) {
-    // code block
-  }
-  return 0;
+while ( condition ) {
+  // code block
 }
 ```
-For Ex:
+`For Ex:`
 ```
 // This program prints the first 10 natural numbers using while loop
 #include <stdio.h>
@@ -228,6 +214,7 @@ int main() {
   return 0;
 }
 ```
+`Output:` 1   2   3   4   5   6   7   8   9   10
 
 ---
 
@@ -237,7 +224,9 @@ Jump statements are used to change the flow of control by transferring execution
 In C programming, `break`, `continue`, `return`, and `goto` are classified as jump statements.
 
 ### Break Statement
-The `break` statement is often used inside a loop. It immediately terminates the current loop and transfers control to the first statement after the loop. For Ex:
+The `break` statement is often used inside a loop. It immediately terminates the current loop and transfers control to the first statement after the loop. 
+
+`For Ex:`
 ```
 #include <stdio.h>
 
@@ -250,10 +239,12 @@ int main() {
     return 0;
 }
 ```
-Output: 1  2
+`Output:` 1  2
 
 ### Continue Statement
-The `continue` statement is also often used inside a loop. It skips the remaining statements in the current iteration and proceeds directly to the next iteration of the loop. For Ex:
+The `continue` statement is also often used inside a loop. It skips the remaining statements in the current iteration and proceeds directly to the next iteration of the loop. 
+
+`For Ex:`
 ```
 #include <stdio.h>
 
@@ -266,10 +257,12 @@ int main() {
     return 0;
 }
 ```
-Output: 1  2  4  5
+`Output:` 1  2  4  5
 
 ### Return Statement
-The `return` statement is used to exit from a function. It immediately terminates the function's execution and optionally sends a value back to the calling function. For Ex: 
+The `return` statement is used to exit from a function. It immediately terminates the function's execution and optionally sends a value back to the calling function.
+
+`For Ex:`
 ```
 #include <stdio.h>
 
@@ -283,11 +276,13 @@ int main() {
     return 0;
 }
 ```
-Output: Square = 16!
+`Output:` Square = 16!
 
 
 ### Goto Statement
 The `goto` statement is used to transfer control unconditionally to a labeled statement within the same function. It allows the program to jump to a specific part of the code, bypassing normal control flow.
+
+`For Ex:`
 ```
 #include <stdio.h>
 
@@ -301,7 +296,7 @@ skip:
     return 0;
 }
 ```
-Output: Jumped to the label.
+`Output:` Jumped to the label.
 
 ---
 
