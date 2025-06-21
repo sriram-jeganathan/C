@@ -63,7 +63,6 @@ int main() {
   printf("This is a C Programming");
   return 0;
 }
-
 ```
 To pass a variable through the printf statement, we must use the specified variable's format specifier and the variable name.
 ```
@@ -92,14 +91,12 @@ For Ex:
 int main() {
   // Declaring the variable with its value
   int x = 10;
-
   // to check if the number is even or odd
   if ( x % 2 == 0 ) {
     printf( "%d is even!\n ", x );
   } else {
     printf( "%d is odd!\n ", x );
   }
-
   return 0;
 }
 ```
@@ -112,7 +109,6 @@ Syntax:
 #include <stdio.h>
 
 int main() {
-
   if ( condition ) {
     statement/s
   } elseif ( condition ) {
@@ -120,7 +116,6 @@ int main() {
   } else {
     statement/s
   }
-
   return 0;
 }
 ```
@@ -135,9 +130,8 @@ Syntax:
 #include <stdio.h>
 
 int main() {
-
   for ( initialization; condition; update ){
-    block of statement
+    block of statements
   }
   return 0;
 }
@@ -148,7 +142,6 @@ For Ex:
 #include <stdio.h>
 
 int main() {
-
   for ( int i = 1; i <= 10; i++ ){
     printf("%d\t", i);
   }
@@ -172,7 +165,7 @@ Syntax:
 int main() {
 
   while ( condition ) {
-    block of statement
+    block of statements
   }
   return 0;
 }
