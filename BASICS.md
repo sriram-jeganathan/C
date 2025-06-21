@@ -72,6 +72,8 @@ Some basic special characters are \n, \t and more . . .
 
 
 ---
+# Conditional Statament
+Conditional statements in C are used to control the flow of execution based on specified conditions. The conditional statements in C are if statements and switch-case statements
 
 ## If Statements
 An if statement is a conditional statement used in programming to execute a block of code only if a specified condition is true.
@@ -102,13 +104,68 @@ Syntax:
 
 int main() {
   if ( condition ) {
-    statement/s
+    // code block
   } elseif ( condition ) {
-    statement/s
+    // code block
   } else {
-    statement/s
+    // code block
   }
   return 0;
+}
+```
+## Switch-Case Statements
+Switch-case statements are also a type of conditional statement in C. They are used to execute different blocks of code based on the value of a single variable or expression. This statement works best when checking a variable against multiple constant values.
+
+Syntax:
+```
+switch (expression) {
+    case constant1:
+        // code block
+        break;
+    case constant2:
+        // code block
+        break;
+    ...
+    default:
+        // default code block
+}
+
+```
+Without the use of `break`, execution will continue into the next case, even if a match is found. This is called `fall-through` and is usually not efficient or desired. Therefore, we use break to exit the switch block once a matching case has been executed.
+
+For Ex: 
+```
+#include <stdio.h>
+
+int main() {
+    int day = 3;
+
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        case 3:
+            printf("Wednesday\n");
+            break;
+        case 4:
+            printf("Thursday\n");
+            break;
+        case 5:
+            printf("Friday\n");
+            break;
+        case 6:
+            printf("Saturday\n");
+            break;
+        case 7:
+            printf("Sunday\n");
+            break;
+        default:
+            printf("Invalid day\n");
+    }
+    return 0;
 }
 ```
 
@@ -119,14 +176,10 @@ A for loop is used when a block of statements needs to be iterated a known and f
 
 Syntax:
 ```
-#include <stdio.h>
-
-int main() {
-  for ( initialization; condition; update ){
-    block of statements
-  }
-  return 0;
+for ( initialization; condition; update ){
+  // code block
 }
+  
 ```
 For Ex:
 ```
@@ -156,7 +209,7 @@ Syntax:
 
 int main() {
   while ( condition ) {
-    block of statements
+    // code block
   }
   return 0;
 }
@@ -234,7 +287,7 @@ Output: Square = 16!
 
 
 ### Goto Statement
-The `goto` statement is used to transfer control unconditionally to a labeled statement within the same function. It allows the program to jump to a specific part of the code, bypassing normal control flow. However, its use is generally discouraged as it can make code harder to read and maintain.
+The `goto` statement is used to transfer control unconditionally to a labeled statement within the same function. It allows the program to jump to a specific part of the code, bypassing normal control flow.
 ```
 #include <stdio.h>
 
@@ -250,9 +303,9 @@ skip:
 ```
 Output: Jumped to the label.
 
-
-
 ---
+
+
 
 
 
