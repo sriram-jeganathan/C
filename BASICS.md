@@ -17,7 +17,7 @@ there is no string data type in C
 ---
 
 ## Arithmetic Operators
-The common operators used in C to carry out mathematical calculations are ( with operator precedence )
+The arithmetic operators in C, listed by their precedence from highest to lowest, are:
 
 `* → / → % → + → - → ++ → --`
 
@@ -176,6 +176,23 @@ int main() {
   return 0;
 }
 ```
+
+---
+
+## Jump Statements
+
+Jump statements are used to change the flow of control by transferring execution to a different part of the program.
+In C programming, `break`, `continue`, `return`, and `goto` are classified as jump statements.
+
+### Break Statement
+
+### Continue Statement
+
+### Return Statement
+
+### goto Statement
+
+
 
 ---
 
