@@ -18,6 +18,7 @@ there is no string data type in C
 
 ## Arithmetic Operators
 The common operators used in C to carry out mathematical calculations are ( with operator precedence )
+
 `* → / → % → + → - → ++ → --`
 
 ---
