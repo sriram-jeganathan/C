@@ -155,7 +155,6 @@ Syntax:
 #include <stdio.h>
 
 int main() {
-
   while ( condition ) {
     block of statements
   }
@@ -185,12 +184,71 @@ Jump statements are used to change the flow of control by transferring execution
 In C programming, `break`, `continue`, `return`, and `goto` are classified as jump statements.
 
 ### Break Statement
+The `break` statement is often used inside a loop. It immediately terminates the current loop and transfers control to the first statement after the loop. For Ex:
+```
+#include <stdio.h>
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        if (i == 3)
+            break;  // exits the loop when i is 3
+        printf("%d\t", i);
+    }
+    return 0;
+}
+```
+Output: 1  2
 
 ### Continue Statement
+The `continue` statement is also often used inside a loop. It skips the remaining statements in the current iteration and proceeds directly to the next iteration of the loop. For Ex:
+```
+#include <stdio.h>
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        if (i == 3)
+            continue;  // skips printing 3
+        printf("%d\t", i);
+    }
+    return 0;
+}
+```
+Output: 1  2  4  5
 
 ### Return Statement
+The `return` statement is used to exit from a function. It immediately terminates the function's execution and optionally sends a value back to the calling function. For Ex: 
+```
+#include <stdio.h>
 
-### goto Statement
+int square(int n) {
+    return n * n;  // exits the function and returns the result
+}
+
+int main() {
+    int result = square(4);
+    printf("Square = %d!\n", result);
+    return 0;
+}
+```
+Output: Square = 16!
+
+
+### Goto Statement
+The `goto` statement is used to transfer control unconditionally to a labeled statement within the same function. It allows the program to jump to a specific part of the code, bypassing normal control flow. However, its use is generally discouraged as it can make code harder to read and maintain.
+```
+#include <stdio.h>
+
+int main() {
+    int x = 1;
+    if (x == 1)
+        goto skip;
+    printf("This line is skipped.\n");
+skip:
+    printf("Jumped to the label.\n");
+    return 0;
+}
+```
+Output: Jumped to the label.
 
 
 
