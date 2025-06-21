@@ -1,7 +1,5 @@
 # Basics Of C Programming
 
----
-
 ## Data Types
 In order to use a variable, the data type of the variable must be specified along with it's name.
 To pass the variable in a printf statement, a format specifier must be used.
@@ -89,6 +87,7 @@ if ( condition ) {
 }
 ```
 We can also use elseif statements to add more conditions. Only when the first if condition fails, the elseif statement run.
+
 `For Ex:`
 ```
 #include <stdio.h>
@@ -124,7 +123,7 @@ switch (expression) {
         // default code block
 }
 ```
-Without the use of `break`, execution will continue into the next case, even if a match is found. This is called `fall-through` and is usually not efficient or desired. Therefore, we use break to exit the switch block once a matching case has been executed.
+Without the use of break, execution will continue into the next case, even if a match is found. This is called fall-through and is usually not efficient or desired. Therefore, we use break to exit the switch block once a matching case has been executed.
 
 `For Ex:`
 ```
