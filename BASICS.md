@@ -73,7 +73,6 @@ int main() {
   printf( "%d", x );
   return 0;
 }
-
 ```
 There are special characters, each serving a different purpose.
 Some basic special characters are \n, \t and more . . .
