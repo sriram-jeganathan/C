@@ -95,6 +95,7 @@ int main() {
 }
 ```
 `Output:` 10 is even!
+
 We can also use elseif statements to add more conditions. Only when the first if condition fails, the elseif statement run.
 
 `Syntax:`
