@@ -164,6 +164,8 @@ int main() {
 
 ---
 
+# Loop Statements
+
 ## For Loop
 A for loop is used when a block of statements needs to be iterated a known and fixed number of times.
 
@@ -186,8 +188,6 @@ int main() {
 }
 ```
 `Output:` 1   2   3   4   5   6   7   8   9   10
-
----
 
 ## While Loop
 
@@ -215,14 +215,39 @@ int main() {
 ```
 `Output:` 1   2   3   4   5   6   7   8   9   10
 
+## Do-while Loop
+A do-while loop is similar to a while loop, but it checks the condition after each iteration of the loop body.
+
+`Syntax:`
+```
+do {
+    // Code block
+} while (condition);
+```
+Use a do-while loop when you want the code inside the loop to execute at least once, regardless of whether the condition is true or false initially.
+
+`For Ex:`
+```
+#include <stdio.h>
+
+int main() {
+    int i = 10;
+    do {
+        printf("%d is not less than 5!", i);
+    } while (i < 5);  // Condition is false
+    return 0;
+}
+```
+`Output:` 10 is not less than 5!
+
 ---
 
-## Jump Statements
+# Jump Statements
 
 Jump statements are used to change the flow of control by transferring execution to a different part of the program.
 In C programming, `break`, `continue`, `return`, and `goto` are classified as jump statements.
 
-### Break Statement
+## Break Statement
 The `break` statement is often used inside a loop. It immediately terminates the current loop and transfers control to the first statement after the loop. 
 
 `For Ex:`
@@ -240,7 +265,7 @@ int main() {
 ```
 `Output:` 1  2
 
-### Continue Statement
+## Continue Statement
 The `continue` statement is also often used inside a loop. It skips the remaining statements in the current iteration and proceeds directly to the next iteration of the loop. 
 
 `For Ex:`
@@ -258,7 +283,7 @@ int main() {
 ```
 `Output:` 1  2  4  5
 
-### Return Statement
+## Return Statement
 The `return` statement is used to exit from a function. It immediately terminates the function's execution and optionally sends a value back to the calling function.
 
 `For Ex:`
@@ -278,7 +303,7 @@ int main() {
 `Output:` Square = 16!
 
 
-### Goto Statement
+## Goto Statement
 The `goto` statement is used to transfer control unconditionally to a labeled statement within the same function. It allows the program to jump to a specific part of the code, bypassing normal control flow.
 
 `For Ex:`
