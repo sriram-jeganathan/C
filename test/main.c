@@ -1,6 +1,19 @@
 #include "list.h"
 
 int main() {
-	create_list();	
-	print_list();
+	List *list1 = create_list();	
+	printf("First List: ");
+	print_list( list1 );
+	printf("\n");
+
+	List *list2 = create_list();	
+	printf("Second List: ");
+	print_list( list2 );
+	printf("\n");
+
+	List *result = add_number( list1, list2);
+	printf("Sum: ");
+	print_list( result );
+	printf("\n");
+	return 0;
 }

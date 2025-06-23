@@ -6,6 +6,13 @@ typedef struct node {
 	struct node *next;
 }Node;
 
-void add_node( int );
-Node* create_list( void );
-void print_list( void );
+typedef struct list{
+	Node *head;
+	Node *tail;
+}List;
+
+List* add_node( List*, int );
+List* create_list( void );
+void print_list( List* );
+List* add_number( List*, List* );
+List* subtract_number( List*, List* );
