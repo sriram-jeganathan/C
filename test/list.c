@@ -4,54 +4,56 @@ Node *head = NULL;
 Node *tail = NULL;
 
 void add_node( int x ) {
-	Node *newNode = malloc ( sizeof( Node ) );
-	newNode->number=x;
+	Node* newNode = malloc ( sizeof ( Node ) );
+	newNode->number = x;
 	newNode->next = NULL;
 
 	if ( NULL == head ) {
 		head = newNode;
 		tail = newNode;
 	} else {
-		//Connects the newNode after tail node
 		tail->next = newNode;
-		//Sets the tail to the newNode ( last Node )
-		tail = tail->next;
+		tail = newNode;
 	}
 }
+
+Node* create_list ( void ) { 
+	int x, y;
+	printf("Enter a 4 Digit Number: ");
+	scanf("%d", &x);
+	printf("Number has been accepted\n");
+	y = x;
+
+	//First Digit
+	y = x;
+	y = x % 10;
+	add_node(y);
+
+	//Second Digit
+	y = x;
+	y = x / 10;
+	y = y % 10;
+	add_node(y);
+
+	//Third Digit
+	y = x;
+	y = x / 100;
+	y = y % 10;
+	add_node(y);
+
+	//Fourth Digit
+	y = x;
+	y = x / 1000;
+	add_node(y);
+
+}
+
 
 void print_list( void ) {
-	Node *currentNode = head;
-	while ( NULL != currentNode ){
-		printf( "%d -> ", currentNode->number );
-		currentNode = currentNode->next;
+	Node* current = head;
+	while ( NULL != current ) {
+		printf("%d -> ", current->number);
+		current = current->next;
 	}
 	printf("NULL\n");
-}
-
-void reverse_print( Node *current, Node *previous) {
-	
-	if ( current == NULL ) {
-		return;
-	}
-
-	reverse_print( current->next, current );
-	printf("%d -> ", current->number);
-}
-
-
-void reverse( Node *current, Node *previous ) {	
-	if ( current == NULL ) {
-		return;
-	}
-
-	reverse( current->next, current );
-	current->next = previous;	
-}
-
-void reverse_list( void ) {
-	Node *temp;
-	reverse ( head, NULL );
-	temp = head;
-	head = tail;
-	tail = temp;
 }
