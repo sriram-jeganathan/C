@@ -324,6 +324,14 @@ skip:
 
 ---
 
+# Arrays in C
+
+Arrays store multiple values in a single variable. To create one, specify the data type, array name, and use square brackets `[]`.
+
+
+
+---
+
 
 
 
