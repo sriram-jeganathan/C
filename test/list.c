@@ -83,5 +83,27 @@ List* add_number( List* list1, List* list2 ) {
 
     	return result;
 }
+List* subtract_number( List* list1, List* list2 ) {
 
+    	Node* n1 = list1->head;
+    	Node* n2 = list2->head;
+	List* result = malloc(sizeof(List));
+    	result->head = NULL;
 
+    	int carry_over = 0;
+	for ( int i = 0; i < 4; i++ ){
+        	int diff = carry_over;
+        	if (n1 != NULL) {
+            		result -= n1->number;
+            		n1 = n1->next;
+        	}
+        	if (n2 != NULL) {
+            		diff -= n2->number;
+            		n2 = n2->next;
+        	}
+
+        	carry_over = diff - 10;
+        	add_node(result, diff);  // Add digit to result
+    	}
+	return result;
+}

@@ -15,5 +15,12 @@ int main() {
 	printf("Sum: ");
 	print_list( result );
 	printf("\n");
+
+	List *result2 = subtract_number( list1, list2);
+	printf("Diff: ");
+	print_list( result2 );
+	printf("\n");
+
 	return 0;
+
 }
