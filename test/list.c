@@ -25,6 +25,7 @@ List* create_list ( void ) {
 	scanf("%d", &x);
 	y = x;
 	
+	
 	//First Digit
 	y = x;
 	y = x % 10;
@@ -56,7 +57,21 @@ void print_list( List *list ) {
 		printf("%d  ", current->number);
 		current = current->next;
 	}
-	printf("NULL\n");
+	printf("\n");
+}
+
+void reverse_print( List *list ) {
+	print_reverse( list->head, NULL );
+}
+
+void print_reverse( Node *current, Node *previous ) {
+	if ( NULL == current ) {
+		return;
+	}
+
+	print_reverse( current->next, current );
+	printf("%d  ", current->number);
+
 }
 
 List* add_number( List* list1, List* list2 ) {
@@ -66,7 +81,7 @@ List* add_number( List* list1, List* list2 ) {
     	result->head = NULL;
 
     	int carry_over = 0;
-	for ( int i = 0; i < 4; i++ ){
+	while(( NULL != n1 ) && ( NULL != n2 )) {
         	int sum = carry_over;
         	if (n1 != NULL) {
             	sum += n1->number;
@@ -78,8 +93,11 @@ List* add_number( List* list1, List* list2 ) {
         	}
 
         	carry_over = sum / 10;
-        	add_node(result, sum % 10);  // Add digit to result
+        	add_node(result, sum % 10); 
     	}
+	if ( 0 < carry_over ) {
+		add_node(result, carry_over);
+	}
 
     	return result;
 }
@@ -93,16 +111,6 @@ List* subtract_number( List* list1, List* list2 ) {
     	int carry_over = 0;
 	for ( int i = 0; i < 4; i++ ){
         	int diff = carry_over;
-        	if (n1 != NULL) {
-            		result -= n1->number;
-            		n1 = n1->next;
-        	}
-        	if (n2 != NULL) {
-            		diff -= n2->number;
-            		n2 = n2->next;
-        	}
-
-        	carry_over = diff - 10;
         	add_node(result, diff);  // Add digit to result
     	}
 	return result;

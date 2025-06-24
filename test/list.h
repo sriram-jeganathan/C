@@ -14,5 +14,7 @@ typedef struct list{
 List* add_node( List*, int );
 List* create_list( void );
 void print_list( List* );
+void reverse_print( List* );
+void print_reverse( Node*, Node* );
 List* add_number( List*, List* );
 List* subtract_number( List*, List* );
