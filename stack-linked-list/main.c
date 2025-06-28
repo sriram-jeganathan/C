@@ -16,8 +16,13 @@ int main() {
 
     printf("Popped: %d\n", pop(stack));
     printf("Popped: %d\n", pop(stack));
-    printf("Popped: %d (should trigger UNDERFLOW)\n", pop(stack));
+
+    while (stack->head != NULL) {
+        Node* temp = stack->head;
+        stack->head = stack->head->next;
+        free(temp);
+    }
+    free(stack);
 
     return 0;
 }
-

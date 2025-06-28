@@ -12,8 +12,8 @@ typedef struct list{
 	Node *tail;
 }List;
 
-List* add_node{ List*, int };
-List* create_list{ List* };
-void print_list{ List* };
-int pop{ List* };
-void push{ List*, int };
+List* add_node( List*, int );
+List* create_list( List* );
+void print_list( List* );
+int pop( List* );
+void push( List*, int );
