@@ -1,17 +1,36 @@
 #include "list.h"
 
-
-void push ( List* list, int x ) {
-	add_node( list, x );
+void push(List* list, int x) {
+	add_node(list, x);
 }
 
-int pop ( List* list ) {
-	Node *current = list->head;
-	if ( NULL == list->head ) {
+int pop(List* list) {
+	if (list->head == NULL) {
 		printf("UNDERFLOW!\n");
-		return 0;
+		return -1;
 	}
-	free(list->tail);
-	list->tail = list->tail_previous;
-	list->tail->next = NULL;
+
+	Node *current = list->head;
+	Node *prev = NULL;
+
+	while (current->next != NULL) {
+		prev = current;
+		current = current->next;
+	}
+
+	int val = current->number;
+
+	if (prev == NULL) {
+		// Only one node in stack
+		free(current);
+		list->head = NULL;
+		list->tail = NULL;
+	} else {
+		free(current);
+		prev->next = NULL;
+		list->tail = prev;
+	}
+
+	return val;
 }
+
