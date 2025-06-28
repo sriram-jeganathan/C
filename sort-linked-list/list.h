@@ -16,5 +16,4 @@ List* add_node( List*, int );
 List* create_list( void );
 void print_list( List* );
 List* merge_list( List*, List* );
-int count_nodes ( List* );
 void sort_list( List* );

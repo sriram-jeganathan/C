@@ -29,7 +29,6 @@ List* create_list( void ) {
 		scanf("%d", &number );
 		add_node( list, number );
 	}
-	printf("List is Created!\n");
 	return list;
 }
 
@@ -39,7 +38,6 @@ void print_list( List* list ) {
 		printf("%d\t", current->number);
 		current = current->next;
 	}
-	printf("\nList Printed!\n");
 }
 
 List* merge_list( List* list1, List* list2 ) {
@@ -57,40 +55,23 @@ List* merge_list( List* list1, List* list2 ) {
 	return merged;
 }
 
-int count_nodes( List* list ) {
-	Node* n1 = list->head;
-	int count = 0;
-	while ( NULL != n1 ){
-		count++;
-		n1 = n1->next;
-	}
-	return count;
-}
 void sort_list( List* list ) {
-	int n = count_nodes( list ) - 1;
-	int* arr = (int*)malloc(n * sizeof(int));
-	Node *temp = list->head;
-
-	for ( int i = 0; i < n; i++ ) {
-		arr[i] = temp->number;
-		temp = temp->next;
-	}
+	Node *outer = list->head;
+	Node *inner = list->head;
+	Node *temp = malloc( sizeof(Node) );
 	
-	for ( int i = 0; i < n; i++ ) {
-		for ( int j = 0; j < n - i; j++ ) {
-			if ( arr[j] > arr[j+1] ) {
-				int t = arr[j];
-				arr[j] = arr[j+i];
-				arr[j+i] = t;
+	while ( NULL != outer ) {
+		inner = list->head;
+		while ( NULL != inner ) {
+			if ( inner->number > outer->number ) {
+				temp->number = inner->number;
+				inner->number = outer->number;
+				outer->number = temp->number;
 			}
+			inner = inner->next;
 		}
-	}
-	int i = 0;
-	temp = list->head;
-	while ( NULL != temp ) {
-		temp->number = arr[i];
-		temp = temp->next;
-		i++;
+		outer = outer->next;
 	}
 }
+
 
