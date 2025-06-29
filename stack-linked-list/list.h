@@ -13,7 +13,7 @@ typedef struct list{
 }List;
 
 List* add_node( List*, int );
-List* create_list( List* );
+List* create_list();
 void print_list( List* );
 int pop( List* );
 void push( List*, int );

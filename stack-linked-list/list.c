@@ -16,18 +16,16 @@ List* add_node(List *list, int x) {
     }
 }
 
-List* create_list( void ) {
+List* create_list(void) {
     List *list = malloc(sizeof(List));
-    list->head = NULL;
-    list->tail = NULL;
+    list->head = NULL; 
+    list->tail = NULL; 
     list->tail_previous = NULL;
-
     return list;
 }
 
 void print_list(List *list) {
     Node *current = list->head;
-
     while (current != NULL) {
         printf("%d -> ", current->number);
         current = current->next;
