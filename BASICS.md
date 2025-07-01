@@ -350,7 +350,32 @@ In C, functions are categorized into two main types:
 
 * Library (built-in) functions – Predefined functions provided by the C standard library, such as printf(), scanf(), sqrt(), etc.
 
-* User-defined functions – Functions written by the programmer to perform specific tasks and improve code modularity and reusability.
+* User-defined functions 
+## User - defined functions
+Functions written by the programmer to perform specific tasks and improve code modularity and reusability.
+`For Ex:`
+```
+#include <stdio.h>
+
+void even_or_odd( int x ) {
+  if ( x % 2 == 0 ) {
+    printf("%d is even!\n", x );
+  } else {
+    printf("%d is odd!\n", x );
+  }
+}
+
+int main ( void ) {
+  //Let the input be 14
+  int number;
+  printf("Enter your Number: ");
+  scanf("%d", &number );
+  even_or_odd( number );
+  return 0;
+}
+```
+`Output:` 14 is even!
+
 
 
 
