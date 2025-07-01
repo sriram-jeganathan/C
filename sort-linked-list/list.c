@@ -55,6 +55,7 @@ List* merge_list( List* list1, List* list2 ) {
 	return merged;
 }
 
+
 void sort_list( List* list ) {
 	Node *outer = list->head;
 	Node *inner = list->head;
