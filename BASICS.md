@@ -328,10 +328,29 @@ skip:
 
 Arrays store multiple values in a single variable. To create one, specify the data type, array name, and use square brackets `[]`.
 
-
-
+`Syntax:`
+```
+(datatype) variable_name [ size ];
+```
+`For Ex:`
+```
+//defining a character array having a size of 10
+char name[10];
+```
+We can also define a 2D by specifying the size in two different square brackets.
+`For Ex:`
+```
+//Here we are defining an 2D integer array of dimensions 3x3. 
+int matrix[3][3]
+```
 ---
 
+# Types of Functions
+In C, functions are categorized into two main types:
+
+* Library (built-in) functions – Predefined functions provided by the C standard library, such as printf(), scanf(), sqrt(), etc.
+
+* User-defined functions – Functions written by the programmer to perform specific tasks and improve code modularity and reusability.
 
 
 
