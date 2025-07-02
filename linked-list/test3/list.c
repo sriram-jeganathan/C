@@ -21,29 +21,34 @@ List* create_list ( void ) {
 	list->tail = NULL;
 
 	int x, y;
-	printf("Enter number of digits: ");
+	printf("Enter the number of digits : ");
 	scanf("%d", &x);
-	for ( int n = 1; n <= x; n++ ){
+	y = x;
+	
+	for ( int i = 1; i <= x; i++ ) {
 		printf("Enter your number: ");
 		scanf("%d", &y );
-		add_node(list, y);
+		add_node( list, y );
 	}
-	
 	return list;
 }
 
 
-void reverse_print( List *list ) {
-	print_reverse( list->head, NULL );
-}
-
-void print_reverse( Node *current, Node *previous ) {
-	if ( NULL == current ) {
-		return;
+void print_list( List *list ) {
+	Node* current = list->head;
+	while ( NULL != current ) {
+		printf("%d  ", current->number);
+		current = current->next;
 	}
-
-	print_reverse( current->next, current );
-	printf("%d  ", current->number);
-
+	printf("\n");
 }
 
+int count_nodes( List *list ) {
+	Node *current = list->head;
+	int count = 0;
+	while ( NULL != current ) {
+		count++;
+		current = current->next;
+	}
+	return count;
+}

@@ -11,10 +11,6 @@ int main() {
 	reverse_print( list2 );
 	printf("\n");
 	
-	List *result = add_list( list1, list2 );
-	printf( "The union of the 2 lists are: \n" );
-	reverse_print( result );
-	printf("\n");
 	return 0;
 
 }

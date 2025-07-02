@@ -1,18 +1,17 @@
 #include "list.h"
 
 
-List *add_node( List *list,int x ) {
-	Node* newNode = malloc ( sizeof ( Node ) );
-	newNode->number = x;
-	newNode->next = NULL;
+List *add_node(List *list, int x) {
+    Node *newNode = malloc(sizeof(Node));
+    newNode->number = x;
+    newNode->next = list->head;  
+    list->head = newNode;       
 
-	if ( NULL == list->head ) {
-		list->head = newNode;
-		list->tail = newNode;
-	} else {
-		list->tail->next = newNode;
-		list->tail = newNode;
-	}
+    if (list->tail == NULL) {
+        list->tail = newNode;    // First node is also the tail
+    }
+
+    return list;
 }
 
 List* create_list ( void ) { 

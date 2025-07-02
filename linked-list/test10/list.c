@@ -40,3 +40,17 @@ void print_list( List *list ) {
 	}
 	printf("\n");
 }
+
+int count_list( List* list ) {
+	Node *current = list->head;
+	int count = 0;
+	while ( NULL != current ) {
+		count++;
+		current = curren->next;
+	}
+	return count;
+}
+
+void delele_node( List *list ) {
+	
+}

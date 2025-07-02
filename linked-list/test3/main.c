@@ -10,5 +10,13 @@ int main() {
 	printf("Second List: ");
 	print_list(list2);
 	printf("\n");
+	
+	int x = count_nodes(list1);
+	printf("Number of elements in list1: %d", x);
+	printf("\n");
+
+	int y = count_nodes(list2);
+	printf("Number of elements in list2: %d", y);
+	printf("\n");
 	return 0;
 }

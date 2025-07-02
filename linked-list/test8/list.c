@@ -21,11 +21,13 @@ List* create_list ( void ) {
 	list->tail = NULL;
 
 	int x, y;
-	printf("Enter a 4 Digit Number: ");
+	printf("Enter the number of digits : ");
 	scanf("%d", &x);
 	y = x;
 	
 	for ( int i = 1; i <= x; i++ ) {
+		printf("Enter your number: ");
+		scanf("%d", &y );
 		add_node( list, y );
 	}
 	return list;
@@ -39,4 +41,33 @@ void print_list( List *list ) {
 		current = current->next;
 	}
 	printf("\n");
+}
+
+int count_nodes( List *list ) {
+	Node *current = list->head;
+	int count = 0;
+	while ( NULL != current ) {
+		count++;
+		current = current->next;
+	}
+	return count;
+}
+
+List* add_in_middle( List* list, int x ) {
+	Node *current = list->head;
+	int count = count_nodes( list );
+	int middle = count/2;
+
+	Node *newNode = malloc ( sizeof ( Node ) );
+	newNode->number = x;
+	newNode->next = NULL;
+
+	for ( int i = 1; i <= middle; i++ ) {
+		if ( i == middle ) {
+			Node *temp = current->next;
+			current->next = newNode;
+			newNode->next = temp;
+		}
+		current = current->next;
+	}
 }
