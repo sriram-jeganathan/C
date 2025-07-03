@@ -6,9 +6,7 @@ int main() {
 	print_list(list1);
 	printf("\n");
 
-	List *list2 = create_list();	
-	printf("Second List: ");
-	print_list(list2);
-	printf("\n");
+	delete_middle_node( list1 );
+	print_list( list1 );
 	return 0;
 }

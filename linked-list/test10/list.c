@@ -20,12 +20,14 @@ List* create_list ( void ) {
 	list->head = NULL;
 	list->tail = NULL;
 
-	int x, y;
-	printf("Enter a 4 Digit Number: ");
+	int x;
+	printf("Enter number of digits: ");
 	scanf("%d", &x);
-	y = x;
+	int y;
 	
 	for ( int i = 1; i <= x; i++ ) {
+		printf("Enter Number: ");
+		scanf("%d", &y);
 		add_node( list, y );
 	}
 	return list;
@@ -46,11 +48,24 @@ int count_list( List* list ) {
 	int count = 0;
 	while ( NULL != current ) {
 		count++;
-		current = curren->next;
+		current = current->next;
 	}
 	return count;
 }
 
-void delele_node( List *list ) {
-	
+void delete_middle_node( List *list ) {
+	int x = count_list ( list );
+	int middle = x / 2;
+	Node *previous;
+	Node *current = list->head;
+	for ( int i = 0; i <= middle; i++ ) {
+		if ( i == middle-1 ) {
+			previous = current;
+		}
+		if ( i == middle ) {
+			previous->next = current->next;
+			free ( current );
+		}
+		current = current->next;
+	}
 }
