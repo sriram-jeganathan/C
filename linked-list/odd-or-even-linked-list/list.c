@@ -35,28 +35,17 @@ void printList ( List* list ) {
 	return;
 }
 
-List* odd( List *list ) {
+void odd_or_even ( List *list, List *odd, List *even ) {
 	Node *current = list->head;
-	List *odd = createList ();
 
 	while ( NULL != current ) {
-		if ( current->data % 2 != 0  ) {
-			addNode ( odd, current_data );
-		}
-		current = current->next;
-	}
-	return odd;
-}
 
-List* even( List *list ) {
-	Node *current = list->head;
-	List *even = createList ();
-
-	while ( NULL != current ) {
-		if ( current->data % 2 != 0  ) {
-			addNode ( even, current_data );
+		if ( current->data % 2 == 0 ) {
+			addNode ( even, current->data );
+		} 
+		if ( current->data % 2 != 0 ) {
+			addNode ( odd, current->data );
 		}
-		current = current->next;
+		current = current->next; 
 	}
-	return even;
 }

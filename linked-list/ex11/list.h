@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node {
+typedef struct node{
 	int data;
 	struct node *next;
 }Node;
@@ -12,6 +12,6 @@ typedef struct list{
 }List;
 
 void addNode ( List*, int );
-List* createList ( );
+List* createList ( void );
 void printList ( List* );
-void odd_or_even ( List*, List*, List* );
+
