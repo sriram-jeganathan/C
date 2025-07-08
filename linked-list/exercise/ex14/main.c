@@ -11,10 +11,7 @@ int main() {
 	print_list( list2 );
 	printf("\n\n");
 
-	printf("\nMerged and Sorted List: \n");
-	List *merged = merge_list( list1, list2 );
-	sort_list( merged );
-	print_list( merged );
-	printf("\n");
+	palindrome ( list1 );
+	palindrome ( list2 );
 	return 0;
 }
