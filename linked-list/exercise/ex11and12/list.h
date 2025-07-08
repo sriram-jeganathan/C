@@ -9,9 +9,10 @@ typedef struct node {
 typedef struct list{
 	Node *head;
 	Node *tail;
+	int count;
 }List;
 
 void addNode ( List*, int );
 List* createList ( );
 void printList ( List* );
-int* convert ( List* ) {
+int* convert ( List* );

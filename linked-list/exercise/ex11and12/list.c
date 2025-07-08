@@ -37,7 +37,7 @@ void printList ( List* list ) {
 
 int getCount ( List *list ) {
 	Node *current = list->head;
-	int count;
+	int count = 0;
 	while ( NULL != current ) {
 		count++;
 		current = current->next;
@@ -48,12 +48,13 @@ int getCount ( List *list ) {
 int* convert ( List *list ) {
 	Node *current = list->head;
 	int size = getCount( list );
-	char *array = malloc ( size * sizeof ( char ) );
-	int pointer = 0;
+	list->count = size;
+	int *array = malloc ( size * sizeof ( int ) );
+	int index = 0;
 	while ( NULL != current ) {
-		array[pointer] = current->data;
+		array[index] = current->data;
 		current = current->next;
-		pointer++;
+		index++;
 	}
 	return array;
 }
