@@ -141,7 +141,6 @@ void insertTail ( List *list, int x ) {
 	list->tail = newNode;
 }
 
-
 void deleteHead ( List *list ) {
 	printf("\nHead Deleted");
 
@@ -167,28 +166,22 @@ void deleteTail ( List *list ) {
 	list->tail = current;
 }
 
-
-
-
 void deleteMiddle ( List *list ) {
 	int count = countSize ( list );
 	Node* current = list->head;
+	printf("Which element to delete: ");
+	int x;
+	scanf("%d", &x );
 
-	for ( int i = 0; i < count/2; i++ ) {
+	while ( NULL != current ) {
+		if ( current->data == x ) {
+			Node *before = current->previous;
+			Node *after = current->next;
+			before->next = after;
+			after->previous = before;
+			free(current);
+			return;
+		}
 		current = current->next;
 	}
-	Node *temp1 = current->previous;
-	Node *temp2 = current->next;
-
-	current->next = NULL;
-	current->previous = NULL;
-	current = NULL;
-	temp1->next = temp2;
-	temp2->previous = temp1;
-	free(temp1);
-	free(temp2);
-}
-/*
-void Search ( List*, int );
-*/
-
+}	
