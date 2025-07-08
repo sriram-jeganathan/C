@@ -353,6 +353,7 @@ In C, functions are categorized into two main types:
 * User-defined functions 
 ## User - defined functions
 Functions written by the programmer to perform specific tasks and improve code modularity and reusability.
+
 `For Ex:`
 ```
 #include <stdio.h>
