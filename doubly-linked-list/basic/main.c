@@ -26,7 +26,49 @@ int main() {
 	printf("Reversing List: \n");
 	reverseList ( list1 );
 	forwardPrint ( list1 );
+	reverseList ( list1 );
+	printf("\n");
+
+	//Inserting head in the list
+	printf("Inserting Head: \n");
+	insertHead ( list1, 5 );
+	forwardPrint ( list1 );
+	printf("\n");
+
+	//Inserting node in between head and tail
+	printf("Inserting node in between head and tail: \n");
+	insertNode ( list1, 2, 15 );
+	forwardPrint ( list1 );
+	printf("\n");
+
+	//Inserting tail in the list
+	printf("Inserting Tail: \n");
+	insertTail ( list1, 105 );
+	forwardPrint ( list1 );
+	printf("\n");
+
+	//Deleting the head
+	printf("Deleting Head: \n");
+	deleteHead ( list1 );
+	forwardPrint ( list1 );
 	printf("\n");
 	
+	//Deleting the Node in the middle except head and tail
+	printf("Deleting Node: \n");
+	deleteNode ( list1, 15 );
+	forwardPrint ( list1 );
+	printf("\n");
+
+	//Deleting the tail 
+	printf("Deleting Tail: \n");
+	deleteTail ( list1 );
+	forwardPrint ( list1 );
+	printf("\n");
+
+	//Search Node
+	printf("Searching Node: \n");
+	searchNode ( list1, 50 );
+	searchNode ( list1, 55 );
+	printf("\n");
 	return 0;
 }

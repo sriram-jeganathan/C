@@ -78,15 +78,94 @@ void reverseList ( List *list ) {
 	list->tail = temp;
 }
 
+void insertHead ( List *list, int x ) {
+	Node *newNode = malloc ( sizeof ( Node ) );
+	newNode->data = x;
+	newNode->next = NULL;
+	newNode->previous = NULL;
+
+	newNode->next = list->head;
+	list->head->previous = newNode;
+	list->head = newNode;
+}
+
+void insertNode ( List *list, int position, int x ) {
+	Node *current = list->head;
+	for ( int pos = 0; pos < position; pos++ ) {
+		current = current->next;
+	}
+	Node *newNode = malloc ( sizeof ( Node ) );
+	newNode->data = x;
+	newNode->next = NULL;
+	newNode->previous = NULL;
+
+	Node *temp = current->previous;
+	newNode->previous = current->previous;
+	newNode->next = current;
+	temp->next = newNode;
+	current = current->next;
+	current->previous = newNode;
+}
+
+void insertTail ( List *list, int x ) {
+	Node *newNode = malloc ( sizeof ( Node ) );
+	newNode->data = x;
+	newNode->next = NULL;
+	newNode->previous = NULL;
+
+	list->tail->next = newNode;
+	newNode->previous = list->tail;
+	list->tail = newNode;
+}
+
+void deleteHead ( List *list ) {
+	Node *newHead = list->head;
+	newHead = newHead->next;
+
+	Node *temp = list->head;
+	newHead->previous = NULL;
+	free(list->head);
+	list->head = newHead;
+	
+}
+
+void deleteNode ( List *list, int x ) {
+	Node *current = list->head;
+	while ( NULL != current  ) {
+		if ( current->data == x ) {
+			break;
+		}
+		current = current->next;
+	}
+	Node *temp1 = current->previous;
+	Node *temp2 = current->next;
+
+	temp1->next = temp2;
+	temp2->previous = temp1;
+	free(current);
+}
+
+void deleteTail ( List *list ) {
+	Node *newTail = list->tail;
+	newTail = newTail->previous;
+	newTail->next = NULL;
+	free(list->tail);
+	list->tail = newTail;
+}
+
+void searchNode ( List *list, int x ) {
+	Node *current = list->head;
+	while ( NULL != current ) {
+		if ( current->data == x ) {
+			printf("Valid Node!\n");
+			return;
+		}
+		current = current->next;
+	}
+	printf("Invalid Node!\n");
+}
 
 /*
-void insertHead ( List*, int );
-void insertNode ( List*, int, int );
-void insertTail ( List*, int );
-void deleteHead ( List* );
-void deleteTail ( List* );
-void deleteNode ( List*, int );
-void searchNode ( List*, int );
 void sortList ( List* );
 List* mergeList ( List*, List* );
 List* copyList ( List* );
