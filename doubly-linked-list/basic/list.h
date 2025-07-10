@@ -30,3 +30,4 @@ void searchNode ( List*, int );
 void sortList ( List* );
 List* mergeList ( List*, List* );
 List* copyList ( List* );
+void freeList( List* );

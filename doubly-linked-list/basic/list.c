@@ -165,8 +165,62 @@ void searchNode ( List *list, int x ) {
 	printf("Invalid Node!\n");
 }
 
-/*
-void sortList ( List* );
-List* mergeList ( List*, List* );
-List* copyList ( List* );
- */
+List* mergeList ( List *list1, List *list2 ) {
+	Node *current1 = list1->head;
+	Node *current2 = list2->head;
+
+	List* result = createList();
+
+	while ( NULL != current1 ) {
+		addNode ( result, current1->data );
+		current1 = current1->next;
+	}
+
+	while ( NULL != current2 ) {
+		addNode ( result, current2->data );
+		current2 = current2->next;
+	}
+
+	return result;
+}
+
+List* copyList ( List *list ) {
+	List* copy = createList();
+
+	Node *current = list->head;
+
+	while ( NULL != current ) {
+		addNode ( copy, current->data );
+		current = current->next;
+	}
+	return copy;
+}
+
+void sortList ( List *list ) {
+	Node *outer = list->head;
+	Node *inner = list->head;
+	Node *temp = malloc ( sizeof ( Node ) );
+
+	while ( NULL != outer ) {
+		inner = list->head;
+		while ( NULL != inner ) {
+			if ( inner->data > outer->data ) {
+				temp->data = inner->data;
+				inner->data = outer->data;
+				outer->data = temp->data;
+			}
+			inner = inner->next;
+		}
+		outer = outer->next;
+	}
+}
+
+void freeList ( List* list ) {
+    Node* current = list->head;
+    while (current != NULL) {
+        Node* next = current->next;
+        free(current);
+        current = next;
+    }
+    free(list);
+}

@@ -5,7 +5,7 @@ int main() {
 	List *list1 = createList();
 	printf("First list created!\n");
 	//adding elements to the list
-	for ( int i = 10; i < 110; i+=10 ) {
+	for ( int i = 10; i < 60; i+=10 ) {
 		addNode ( list1, i );
 	}
 	//forward printing the list
@@ -70,5 +70,26 @@ int main() {
 	searchNode ( list1, 50 );
 	searchNode ( list1, 55 );
 	printf("\n");
+
+
+
+	//Creating a new list and merging both
+	printf("Lists Merged! \n");
+	List* list2 = createList();
+	for ( int i = 5; i < 60; i+=10 ) {
+		addNode ( list1, i );
+	}
+	List *merged = mergeList ( list1, list2 );
+	forwardPrint ( merged );
+	printf("\n");
+
+	//Sorting the merged list
+	printf("Sorted the merged list! \n");
+	sortList ( merged );
+	forwardPrint ( merged );
+
+	freeList(list1);
+	freeList(list2);
+	freeList(merged);
 	return 0;
 }
