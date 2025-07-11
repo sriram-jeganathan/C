@@ -386,6 +386,9 @@ In C, a variable can only be accessed in the region it is created. There are 2 t
 ## Local Scope
 The variables defined in the local scope can only be used within the local scope.
 
+## Global Global
+The variables defined in the global scope can be used anywhere within the program.
+
 `For Eg:`
 ```
 #include <stdio.h>
@@ -406,8 +409,7 @@ Local Scope: 10
 
 Gobal Scope: 5
 
-## Global Global
-The variables defined in the global scope can be used anywhere within the program.
+---
 
 
 
