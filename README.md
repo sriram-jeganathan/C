@@ -385,7 +385,8 @@ In C, a variable can only be accessed in the region it is created. There are 2 t
 
 * Local Scope
 The variables defined in the local scope can only be used within the local scope.
-`For Eg: `
+
+`For Eg:`
 ```
 #include <stdio.h>
 void variable() {
@@ -399,10 +400,8 @@ int main() {
   return 0;
 }
 ```
-`Output: ` 
-
+`Output:` 
 Local Scope: 10
-
 Gobal Scope: 5
 
 * Global Global
