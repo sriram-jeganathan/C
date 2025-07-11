@@ -23,15 +23,19 @@ void addNode ( List *list, int x ) {
 	newNode->previous = list->tail;
 	list->tail = newNode;
 
-	newNode->next = list->head;
+	list->tail->next = list->head;
 	list->head->previous = list->tail;
 }
 
 void printList ( List *list ) {
 	Node *current = list->head;
+	
 	while ( current->next != list->head ) {
 		printf ( "%d\t", current->data );
 		current = current->next;
+		if ( current == list->tail ) {
+			printf("%d\t\n", current->data );
+		}
 	}
 	printf("\n");
 }
