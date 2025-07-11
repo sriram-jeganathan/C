@@ -383,7 +383,7 @@ int main ( void ) {
 
 In C, a variable can only be accessed in the region it is created. There are 2 types of scopes:
 
-* Local Scope
+## Local Scope
 The variables defined in the local scope can only be used within the local scope.
 
 `For Eg:`
@@ -406,8 +406,7 @@ Local Scope: 10
 
 Gobal Scope: 5
 
-* Global Global
-
+## Global Global
 The variables defined in the global scope can be used anywhere within the program.
 
 
