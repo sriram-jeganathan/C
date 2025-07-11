@@ -32,7 +32,7 @@ void forwardPrint ( List *list ) {
 	printf ( "\n" );
 }
 
-
+\*
 void forwardPrint ( List* );
 void backwardPrint ( List* );
 List reverse ( List*, Node*, Node* );
@@ -46,3 +46,4 @@ void deleteMiddle ( List*, int );
 List* copyList ( List* );
 int countList ( List* );
 void searchNode ( List*, int );
+*\
