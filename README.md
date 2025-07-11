@@ -401,10 +401,13 @@ int main() {
 }
 ```
 `Output:` 
+
 Local Scope: 10
+
 Gobal Scope: 5
 
 * Global Global
+
 The variables defined in the global scope can be used anywhere within the program.
 
 
