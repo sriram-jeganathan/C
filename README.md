@@ -377,6 +377,37 @@ int main ( void ) {
 ```
 `Output:` 14 is even!
 
+---
+
+# Scope Of Variables
+
+In C, a variable can only be accessed in the region it is created. There are 2 types of scopes:
+
+* Local Scope
+The variables defined in the local scope can only be used within the local scope.
+`For Eg: `
+```
+#include <stdio.h>
+void variable() {
+  int x = 10;
+  printf("Local Scope: %d\n", x );
+}
+int main() {
+  int x = 5;
+  variable();
+  printf(" Global Scope: %d\n", x );
+  return 0;
+}
+```
+`Output: ` 
+
+Local Scope: 10
+
+Gobal Scope: 5
+
+* Global Global
+The variables defined in the global scope can be used anywhere within the program.
+
 
 
 
