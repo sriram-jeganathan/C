@@ -1,49 +1,62 @@
 #include "list.h"
 
 List* createList ( void ) {
-	List *list = malloc ( sizeof ( List ) );
+	List* list = malloc ( sizeof ( List ) );
 	list->head = NULL;
 	list->tail = NULL;
 	return list;
 }
 
-void addNode ( List *list, int x ) {
+void addNode( List *list, int x ) {
 	Node *newNode = malloc ( sizeof ( Node ) );
-	newNode->data = x;
+	newNode->number = x;
 	newNode->next = NULL;
 
 	if ( NULL == list->head ) {
 		list->head = newNode;
 		list->tail = newNode;
-		return;
+	} else {
+		list->tail->next = newNode;
+		list->tail = tail->next;
 	}
-
-	list->tail->next = newNode;
-	list->tail = newNode;
 }
 
-void forwardPrint ( List *list ) {
+void forwardPrint( List *list ) {
 	Node *current = list->head;
 
-	while ( NULL != current ) { 
-		printf ( "%d\t", current->data );
+	while ( NULL != current ) {
+		printf("%d\t", current->number);
 		current = current->next;
 	}
-	printf ( "\n" );
+	printf("NULL\n");
 }
 
-\*
-void forwardPrint ( List* );
-void backwardPrint ( List* );
-List reverse ( List*, Node*, Node* );
-void reverseList ( List* );
-void insertHead ( List*, int );
-void insertTail ( List*, int );
-void insertMiddle ( List*, int, int );
-void deleteHead ( List* );
-void deleteTail ( List* );
-void deleteMiddle ( List*, int );
-List* copyList ( List* );
-int countList ( List* );
-void searchNode ( List*, int );
-*\
+void reverse_print ( Node *current, Node *previous ) {
+	
+	if ( current == NULL ) {
+		return;
+	}
+	reverse_print ( current->next,current );
+	printf ( "%d\t", current->number );
+}
+
+void BackwardPrint ( List *list ) {
+	reverse_print( list->head, NULL );
+	printf("NULL\n");
+}
+
+void reverse(Node *current, Node *previous) {
+	if ( NULL == current ) {
+		return;
+	}
+	reverse( current->next, current );
+	current->next = previous;
+}
+
+void reverseList ( List *list ) {
+	Node *temp;
+	reverse ( list->head, NULL );
+	temp = list->head;
+	list->head = list->tail;
+	list->tail = temp;
+}
