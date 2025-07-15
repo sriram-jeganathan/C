@@ -1,4 +1,4 @@
-#include <stido.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 typedef struct node{
@@ -12,6 +12,6 @@ typedef struct tree{
     Node *leaf;
 }Tree;
 
-Tree* createRoot { void };
-void addNode { Tree*, int };
-void printTree { Tree* };
+Tree* createRoot ( void );
+void addNode ( Tree*, int );
+void printTree ( Tree* );

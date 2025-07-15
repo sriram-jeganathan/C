@@ -2,8 +2,8 @@
 
 Tree* createTree ( void ) {
     Tree* tree = malloc ( sizeof ( Tree ) );
-    tree->left = NULL;
-    tree->right = NULL;
+    tree->root = NULL;
+    tree->leaf = NULL;
 }
 
 void addNode ( Tree *tree, int x ) {
@@ -11,28 +11,37 @@ void addNode ( Tree *tree, int x ) {
     newNode->data = x;
     newNode->left = NULL;
     newNode->right = NULL;
-
+    
+    // if the tree is empty
     if ( NULL == tree->root ) {
         tree->root = newNode;
         tree->leaf = newNode;
-        return tree;
+        return;
     }
 
+    // if the newNode is greater that the last node
     if ( tree->leaf->data < newNode->data ) {
         tree->leaf->right = newNode;
         newNode->left = tree->leaf;
         tree->leaf = newNode;
-        return tree;
+        tree->leaf->right = NULL;
+        return;
+    // if the newNode is lower than the last node
     } else {
         Node *temp = tree->leaf->left;
         temp->right = newNode;
         newNode->left = temp;
         newNode->right = tree->leaf;
         tree->leaf->left = newNode;
-        return tree;
+        return;
     }
 }
 
 void printTree ( Tree *tree ) {
-
+    Node *current = tree->root;
+    while ( NULL != current ) {
+        printf ( "%d\t", current->data );
+        current = current->right;
+    }
+    printf("\n");
 }
