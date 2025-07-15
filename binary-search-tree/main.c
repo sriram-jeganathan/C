@@ -1,15 +1,22 @@
+#include <stdio.h>
 #include "list.h"
 
-int main ( void ) {
-    Tree* tree = malloc ( sizeof ( Tree ) );
-    addNode ( tree, 10 );
-    addNode ( tree, 15 );
-    addNode ( tree, 13 );
-    addNode ( tree, 20 );
-    addNode ( tree, 27 );
-    addNode ( tree, 25 );
-    addNode ( tree, 40 );
-    printTree ( tree );
+int main() {
+    Node* tree = createRoot();
+
+    // Adding some nodes
+    tree = addNode(tree, 50);
+    tree = addNode(tree, 30);
+    tree = addNode(tree, 70);
+    tree = addNode(tree, 20);
+    tree = addNode(tree, 40);
+    tree = addNode(tree, 60);
+    tree = addNode(tree, 80);
+
+    printTree(tree);
+    printf("\n");
+
     freeTree ( tree );
+
     return 0;
 }

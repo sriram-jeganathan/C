@@ -7,12 +7,8 @@ typedef struct node{
     struct node *right;
 }Node;
 
-typedef struct tree{
-    Node *root;
-    Node *leaf;
-}Tree;
-
-Tree* createRoot ( void );
-void addNode ( Tree*, int );
-void printTree ( Tree* );
-void freeTree ( Tree* );
+Node* createRoot ( void );
+Node* addNode ( Node*, int );
+void printTree ( Node* );
+void freeTree ( Node* );
+void freeTree ( Node* root );

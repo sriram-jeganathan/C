@@ -1,57 +1,45 @@
 #include "list.h"
 
-Tree* createTree ( void ) {
-    Tree* tree = malloc ( sizeof ( Tree ) );
-    tree->root = NULL;
-    tree->leaf = NULL;
+Node* createRoot ( void ) {
+    Node* root = malloc ( sizeof ( Node ) );
+    root->data = 0;
+    root->left = NULL;
+    root->right = NULL;
+    return root;
 }
 
-void addNode ( Tree *tree, int x ) {
-    Node *newNode = malloc ( sizeof ( Node ) );
-    newNode->data = x;
-    newNode->left = NULL;
-    newNode->right = NULL;
-    
-    // if the tree is empty
-    if ( NULL == tree->root ) {
-        tree->root = newNode;
-        tree->leaf = newNode;
-        return;
+Node* addNode ( Node *root, int x ) {
+    if ( NULL == root ) {
+        Node *newNode = malloc ( sizeof ( Node ) );
+        newNode->data = x;
+        newNode->left = NULL;
+        newNode->right = NULL;
+        return newNode;
     }
 
-    // if the newNode is greater that the last node
-    if ( tree->leaf->data < newNode->data ) {
-        tree->leaf->right = newNode;
-        newNode->left = tree->leaf;
-        tree->leaf = newNode;
-        tree->leaf->right = NULL;
-        return;
-    // if the newNode is lower than the last node
+    if ( x < root->data ) {
+        root->left = addNode ( root->left, x );
     } else {
-        Node *temp = tree->leaf->left;
-        temp->right = newNode;
-        newNode->left = temp;
-        newNode->right = tree->leaf;
-        tree->leaf->left = newNode;
+        root->right = addNode ( root->right, x );
+    }
+    return root;
+}
+
+void printTree ( Node *root ) {
+    if (root == NULL)
+        return;
+
+    printTree(root->left);
+    printf("%d\t", root->data);
+    printTree(root->right);
+}
+
+void freeTree(Node* root) {
+    if ( root == NULL ) { 
         return;
     }
-}
 
-void printTree ( Tree *tree ) {
-    Node *current = tree->root;
-    while ( NULL != current ) {
-        printf ( "%d\t", current->data );
-        current = current->right;
-    }
-    printf("\n");
-}
-
-void freeTree ( Tree* tree ) {
-    Node* current = tree->root;
-    while (current != NULL) {
-        Node* next = current->right;
-        free(current);
-        current = next;
-    }
-    free(tree);
+    freeTree(root->left);  
+    freeTree(root->right);  
+    free(root);             
 }
