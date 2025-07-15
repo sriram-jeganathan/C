@@ -45,3 +45,13 @@ void printTree ( Tree *tree ) {
     }
     printf("\n");
 }
+
+void freeTree ( Tree* tree ) {
+    Node* current = tree->root;
+    while (current != NULL) {
+        Node* next = current->right;
+        free(current);
+        current = next;
+    }
+    free(tree);
+}

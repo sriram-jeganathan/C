@@ -10,4 +10,6 @@ int main ( void ) {
     addNode ( tree, 25 );
     addNode ( tree, 40 );
     printTree ( tree );
+    freeTree ( tree );
+    return 0;
 }

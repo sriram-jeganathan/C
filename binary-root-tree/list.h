@@ -15,3 +15,4 @@ typedef struct tree{
 Tree* createRoot ( void );
 void addNode ( Tree*, int );
 void printTree ( Tree* );
+void freeTree ( Tree* );
