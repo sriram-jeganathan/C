@@ -75,3 +75,17 @@ Node* deleteNode ( Node *root, int key) {
     }
     return root;
 }
+Node* searchNode ( Node *root, int val ) {
+    if (root == NULL) { 
+        return NULL;
+    }
+    if ( root->data == val) {
+        return root;
+    }
+    if ( val < root->data ) {
+        return searchBST(root->left, val);
+    } else {
+        return searchBST(root->right, val);
+    }
+}
+

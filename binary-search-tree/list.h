@@ -12,3 +12,4 @@ Node* addNode ( Node*, int );
 void printTree ( Node* );
 void freeTree ( Node* );
 Node* deleteNode( Node*, int );
+Node* searchNode( Node*, int );
