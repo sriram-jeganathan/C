@@ -16,6 +16,10 @@ int main() {
     printTree(tree);
     printf("\n");
 
+    tree = deleteNode(tree, 40);
+    printTree(tree);
+    printf("\n");
+
     freeTree ( tree );
 
     return 0;

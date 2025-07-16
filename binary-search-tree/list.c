@@ -43,3 +43,35 @@ void freeTree(Node* root) {
     freeTree(root->right);  
     free(root);             
 }
+
+Node* deleteNode ( Node *root, int key) {
+    if (root == NULL)
+        return NULL;
+
+    if (key < root->data)
+        root->left = deleteNode(root->left, key);
+    else if (key > root->data)
+        root->right = deleteNode(root->right, key);
+    else {
+        if (root->left == NULL && root->right == NULL) {
+            free(root);
+            return NULL;
+        }
+        if (root->left == NULL) {
+            Node *t = root->right;
+            free(root);
+            return t;
+        }
+        if (root->right == NULL) {
+            Node *t = root->left;
+            free(root);
+            return t;
+        }
+        Node *cur = root->right;
+        while (cur->left != NULL)
+            cur = cur->left;
+        root->data = cur->data;
+        root->right = deleteNode(root->right, cur->data);
+    }
+    return root;
+}

@@ -11,4 +11,4 @@ Node* createRoot ( void );
 Node* addNode ( Node*, int );
 void printTree ( Node* );
 void freeTree ( Node* );
-void freeTree ( Node* root );
+Node* deleteNode( Node*, int );
