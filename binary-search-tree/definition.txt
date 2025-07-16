@@ -1,15 +1,35 @@
+
 Binary Search Tree
 
-A binary search tree consists of root and leafs. Let each leaf be called node. A node has two pointers, one left and 
-another right, and so on . . .
-A node consists of a number, left pointer and a right pointer. 
+A Binary Search Tree (BST) is a type of binary tree.
 
-The value to the left of the parent node is lower than that of the parent node.
-The value to the right of the parent node is higher than that of the parent node.
+Each tree has a root node and other nodes called leaves.
 
-There is no tail in a bst
+Every node has:
+- A number (value)
+- A left pointer
+- A right pointer
 
-            Parent Node
-    sub                   sub
-sub     sub         sub         sub
+Rules for a BST:
+- The value on the left of a node is smaller than the node.
+- The value on the right of a node is greater than the node.
 
+This rule applies to every node in the tree.
+
+Note:
+- There is no concept of a tail like in a linked list.
+- Left and right children are also nodes called subnodes.
+
+Example BST:
+
+                [ 7 ]
+            /            \
+        [ 5 ]           [ 9 ]
+        /  \             /  \
+    [ 2 ]   [ 7 ]    [ 4 ]   [ 10 ]
+
+* In this example:
+  - 5 is left of 7, so it’s smaller 
+  - 9 is right of 7, so it’s greater 
+  - 7 appears again as a child, which is not allowed in a strict BST
+    values must be unique in strict BSTs
