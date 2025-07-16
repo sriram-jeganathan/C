@@ -10,6 +10,7 @@ typedef struct node{
 Node* createRoot ( void );
 Node* addNode ( Node*, int );
 void printTree ( Node* );
+Node* deleteNode ( Node*, int );
+Node* searchNode ( Node*, int );
+Node* insertNode ( Node*, int );
 void freeTree ( Node* );
-Node* deleteNode( Node*, int );
-Node* searchNode( Node*, int );

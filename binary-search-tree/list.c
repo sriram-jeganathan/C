@@ -9,6 +9,7 @@ Node* createRoot ( void ) {
 }
 
 Node* addNode ( Node *root, int x ) {
+    // if there are no nodes in the tree
     if ( NULL == root ) {
         Node *newNode = malloc ( sizeof ( Node ) );
         newNode->data = x;
@@ -17,6 +18,10 @@ Node* addNode ( Node *root, int x ) {
         return newNode;
     }
 
+    /* 
+     * inserts to the left if the value is less that the parent node, inserts to the right if the value is more than
+     * the parent node 
+     */
     if ( x < root->data ) {
         root->left = addNode ( root->left, x );
     } else {
@@ -26,9 +31,11 @@ Node* addNode ( Node *root, int x ) {
 }
 
 void printTree ( Node *root ) {
+    // checks if the tree is having any value
     if (root == NULL)
         return;
 
+    // recursive calling
     printTree(root->left);
     printf("%d\t", root->data);
     printTree(root->right);
@@ -45,14 +52,16 @@ void freeTree(Node* root) {
 }
 
 Node* deleteNode ( Node *root, int key) {
-    if (root == NULL)
+    if ( root == NULL ) {
         return NULL;
+    }
 
-    if (key < root->data)
+    // checks if 
+    if ( key < root->data ) {
         root->left = deleteNode(root->left, key);
-    else if (key > root->data)
+    } else if ( key > root->data ) {
         root->right = deleteNode(root->right, key);
-    else {
+    } else {
         if (root->left == NULL && root->right == NULL) {
             free(root);
             return NULL;

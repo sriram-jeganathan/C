@@ -1,0 +1,15 @@
+Binary Search Tree
+
+A binary search tree consists of root and leafs. Let each leaf be called node. A node has two pointers, one left and 
+another right, and so on . . .
+A node consists of a number, left pointer and a right pointer. 
+
+The value to the left of the parent node is lower than that of the parent node.
+The value to the right of the parent node is higher than that of the parent node.
+
+There is no tail in a bst
+
+            Parent Node
+    sub                   sub
+sub     sub         sub         sub
+
