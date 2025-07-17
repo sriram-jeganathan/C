@@ -28,7 +28,7 @@ Example BST:
         /  \             /  \
     [ 2 ]   [ 7 ]    [ 4 ]   [ 10 ]
 
-* In this example:
+In this example:
   - 5 is left of 7, so it’s smaller 
   - 9 is right of 7, so it’s greater 
   - 7 appears again as a child, which is not allowed in a strict BST
