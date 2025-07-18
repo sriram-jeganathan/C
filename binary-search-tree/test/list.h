@@ -7,6 +7,8 @@ typedef struct node{
     struct node *right;
 }Node;
 
-Node* createTree ( void );
 Node* addNode ( Node*, int );
-Node* printTree ( Node* );
+void preorderTraversal ( Node* );
+void deleteNode ( Node*, int );
+Node* searchNode ( Node*, int );
+void freeTree ( Node* );
