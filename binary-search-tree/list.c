@@ -41,15 +41,6 @@ void printTree ( Node *root ) {
     printTree(root->right);
 }
 
-void freeTree(Node* root) {
-    if ( root == NULL ) { 
-        return;
-    }
-
-    freeTree(root->left);  
-    freeTree(root->right);  
-    free(root);             
-}
 
 Node* deleteNode ( Node *root, int key) {
     if ( root == NULL ) {
@@ -84,6 +75,7 @@ Node* deleteNode ( Node *root, int key) {
     }
     return root;
 }
+
 Node* searchNode ( Node *root, int val ) {
     if (root == NULL) { 
         return NULL;
@@ -98,3 +90,12 @@ Node* searchNode ( Node *root, int val ) {
     }
 }
 
+void freeTree(Node* root) {
+    if ( root == NULL ) { 
+        return;
+    }
+
+    freeTree(root->left);  
+    freeTree(root->right);  
+    free(root);             
+}
