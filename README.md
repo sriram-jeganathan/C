@@ -411,6 +411,29 @@ Gobal Scope: 5
 
 ---
 
+# Structures in C
+
+A structure in C is a user-defined data type that allows grouping multiple variables of different data types under a single name. It is defined using the keyword `struct`. The individual variables inside a structure are called members or fields, and each member can be of any valid data type.
+
+`For Eg:`
+
+```
+#include <stdio.h>
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+
+int main() {
+    struct Person p1 = {"Alice", 25, 5.4};
+    printf("Name: %s\n", p1.name);
+    printf("Age: %d\n", p1.age);
+    printf("Height: %.1f\n", p1.height);
+    return 0;
+}
+```
+
 
 
 
