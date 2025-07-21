@@ -479,13 +479,13 @@ int main() {
 
 A pointer is a variable that stores the address of another variable.
 
-Each pointer has:
+### Each pointer has:
 
 * A type (like int*, char*)
 * An address (where it points)
 * Can also give the value at that address using *
 
-Rules for Pointers:
+### Rules for Pointers:
 
 Use * to create a pointer
 → int* p; means p is a pointer to an int
