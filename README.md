@@ -475,6 +475,31 @@ int main() {
 }
 ```
 
+# Pointers in C
+
+A pointer is a variable that stores the address of another variable.
+
+Each pointer has:
+
+* A type (like int*, char*)
+* An address (where it points)
+* Can also give the value at that address using *
+
+Rules for Pointers:
+
+Use * to create a pointer
+→ int* p; means p is a pointer to an int
+
+Use & to get the address of a variable
+→ p = &x; stores address of x in p
+
+Use * to get the value at that address
+→ *p gives the value of x
+
+
+
+
+
 
 
 
