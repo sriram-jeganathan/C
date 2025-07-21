@@ -419,7 +419,7 @@ A structure in C is a user-defined data type that allows grouping multiple varia
 
 ```
 #include <stdio.h>
-struct Person {
+struct person {
     char name[50];
     int age;
     float height;
@@ -431,6 +431,47 @@ int main() {
     printf("Age: %d\n", p1.age);
     printf("Height: %.1f\n", p1.height);
     return 0;
+}
+```
+The typedef keyword in C is used to define a new name (alias) for an existing data type. This helps improve code readability and makes complex type declarations easier to manage.
+
+`For Eg:`
+```
+#include <stdio.h>
+typedef struct person {
+    char name[50];
+    int age;
+    float height;
+} Person;
+
+int main() {
+    Person p1 = {"Alice", 25, 5.4};
+    printf("Name: %s\n", p1.name);
+    printf("Age: %d\n", p1.age);
+    printf("Height: %.1f\n", p1.height);
+    return 0;
+}
+```
+
+# Union in C
+
+A union in C is a user-defined data type like a struct, but all members share the same memory space, and only one member can hold a value at a time.
+
+`For Eg:`
+```
+#include <stdio.h>
+union Data {
+    int i;
+    float f;
+    char c;
+};
+
+int main() {
+    union Data d;
+    d.i = 10;
+    d.f = 3.14;  // overwrites i
+    d.c = 'A';   // overwrites f
+    printf("Current value: %c\n", d.c);  // Only c is valid
 }
 ```
 
