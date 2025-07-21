@@ -479,7 +479,7 @@ int main() {
 
 A pointer is a variable that stores the address of another variable.
 
-### Each pointer has:
+### Parts of a Pointer
 
 * A type (like int*, char*)
 * An address (where it points)
