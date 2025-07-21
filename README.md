@@ -499,6 +499,12 @@ Use * to get the value at that address
 
 * *p gives the value of x
 
+`For Eg:` 
+```
+int x = 10;
+int* p = &x;
+printf("%d", *p); // prints 10
+```
 
 
 
