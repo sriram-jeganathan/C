@@ -33,3 +33,4 @@ In this example:
   - 9 is right of 7, so it’s greater 
   - 7 appears again as a child, which is not allowed in a strict BST
     values must be unique in strict BSTs
+

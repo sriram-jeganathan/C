@@ -7,6 +7,11 @@ typedef struct node{
     struct node *right;
 }Node;
 
+typedef struct list{
+    Node *head;
+    Node *tail;
+}List;
+
 Node* createRoot ( void );
 Node* addNode ( Node*, int );
 void inorderprintTree ( Node* );
@@ -15,4 +20,5 @@ void postorderprintTree ( Node* );
 Node* deleteNode ( Node*, int );
 Node* searchBST ( Node*, int );
 Node* insertNode ( Node*, int );
+List* convertBst ( Bst );
 void freeTree ( Node* );
